@@ -1,0 +1,173 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://media.istockphoto.com/id/532550846/photo/old-parts-of-motorcycles-background.jpg?s=612x612&w=0&k=20&c=YxhOSUWVAZjcBSRcdOs5yWlv86y6xOZ8scU6rugT5zw=');
+    background-size:auto;
+    background-position:center;
+}
+
+.cart-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+.cart-items {
+    margin-bottom: 30px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-item img {
+    width: 80px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item-details {
+    flex: 1;
+    margin-left: 15px;
+    text-align: left;
+}
+
+.cart-item-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
+
+.cart-item-price {
+    font-size: 1.1em;
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.cart-item-quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-item-quantity button {
+    background-color: #4bde8b;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.cart-item-quantity button:hover {
+    background-color: #000000;
+}
+
+.cart-summary {
+    background-color: #fafafa;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: right;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.cart-summary h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.cart-summary p {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #555;
+}
+
+#checkout-btn {
+    background-color: #59a9ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#checkout-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Bright Color Scheme */
+.cart-item-name {
+    color: #0026ff;
+}
+
+.homepage {
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #002b80;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+}
+
+nav input {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+nav button {
+    padding: 8px 12px;
+    background-color: #0400ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration:none;
+}

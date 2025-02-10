@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Signup</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Login / Signup Form -->
+        <div class="form-container">
+            <h2>Login / Signup</h2>
+            <form id="authForm" action="http://localhost:3000/register" method="POST">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit" id="submitButton">Signup</button>
+            </form>
+
+        </div>
+
+        <!-- Thank You Note (Initially Hidden) -->
+        <div class="thank-you-container hidden" id="thankYouNote">
+            <h2>Thank You!</h2>
+            <p>You have successfully registered. 😊</p>
+            <p>Redirecting to your Cart...</p>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+
+</html>

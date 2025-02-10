@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Spare Part</title>
+    <link rel="stylesheet" href="inventory.css">
+</head>
+
+<body>
+    <header>
+        <h1>eAuto™</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="inventory.html">Inventory</a>
+            <a href="browse.html">Browse</a>
+            <a href="cart.html">Cart</a>
+            <a href="acc.html">My Account</a>
+            <a href="login.html">Login / Signup</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Post a Spare Part</h1>
+
+        <div class="form-container">
+            <form id="postPartForm" onsubmit="submitForm(event)">
+                <input type="text" id="partName" placeholder="Part Name" required>
+                <input type="text" id="category" placeholder="Category" required>
+                <input type="text" id="subCategory" placeholder="Subcategory" required>
+                <input type="text" id="manufacturer" placeholder="Manufacturer" required>
+                <input type="number" id="price" placeholder="Price" required>
+                <input type="number" id="stockLevel" placeholder="Stock Level" required>
+                <input type="text" id="image" placeholder="Image URL" required>
+                <button type="submit">Post Part</button>
+            </form>
+            <div class="response" id="responseMessage"></div>
+        </div>
+    </div>
+
+    <script>
+        async function submitForm(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Gather form data
+            const formData = {
+                partName: document.getElementById('partName').value,
+                category: document.getElementById('category').value,
+                subCategory: document.getElementById('subCategory').value,
+                manufacturer: document.getElementById('manufacturer').value,
+                price: parseFloat(document.getElementById('price').value),
+                stockLevel: parseInt(document.getElementById('stockLevel').value),
+                image: document.getElementById('image').value
+            };
+
+            // Send data to the server
+            try {
+                const response = await fetch('http://localhost:3000/inventories', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const result = await response.json();
+
+                // Display response on the webpage
+                if (response.ok) {
+                    document.getElementById('responseMessage').textContent = result.message || 'Part added successfully!';
+                    document.getElementById('responseMessage').style.color = 'green';
+                } else {
+                    document.getElementById('responseMessage').textContent = result.message || 'Error adding inventory item';
+                    document.getElementById('responseMessage').style.color = 'red';
+                }
+            } catch (error) {
+                document.getElementById('responseMessage').textContent = 'Error connecting to the server';
+                document.getElementById('responseMessage').style.color = 'red';
+            }
+        }
+    </script>
+</body>
+
+</html>

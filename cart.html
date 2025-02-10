@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eAuto™ Cart</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+
+<body>
+    <header>
+        <h1>eAuto™</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="inventory.html">Inventory</a>
+            <a href="browse.html">Browse</a>
+            <a href="cart.html">Cart</a>
+            <a href="acc.html">My Account</a>
+            <a href="login.html">Login / Signup</a>
+        </nav>
+    </header>
+    <div class="cart-container">
+        <h1>Your Shopping Cart</h1> 
+
+        <!-- Cart Items Section -->
+        <div class="cart-items">
+            <!-- Dynamic cart items will be loaded here via JavaScript -->
+        </div>
+
+        <!-- Cart Total Section -->
+        <div class="cart-summary">
+            <h2>Order Summary</h2>
+            <p>Total Items: <span id="total-items">0</span></p>
+            <p>Total Price: <span id="total-price">$0.00</span></p>
+            <button id="checkout-btn"><a href="checkout.html">checkout</a></button>
+        </div>
+    </div>
+
+    <script src="cart.js"></script>
+</body>
+
+</html>

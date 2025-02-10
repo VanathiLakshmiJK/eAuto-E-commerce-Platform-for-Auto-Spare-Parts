@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Spare Parts</title>
+    <link rel="stylesheet" href="browse.css">
+</head>
+
+<body>
+    <header>
+        <h1>eAuto™</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="inventory.html">Inventory</a>
+            <a href="browse.html">Browse</a>
+            <a href="cart.html">Cart</a>
+            <a href="acc.html">My Account</a>
+            <a href="login.html">Login / Signup</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Browse Spare Parts</h1>
+
+        <div class="search-filter">
+            <input type="text" id="search" placeholder="Search for parts...">
+            <button id="searchButton">Search</button>
+            <select id="categoryFilter">
+                <option value="">All Categories</option>
+                <option value="engine">Engine and Fuel System Parts</option>
+                <option value="braking">Braking</option>
+                <option value="suspension">Suspension</option>
+                <option value="electricals">Electricals</option>
+                <option value="transmission">Transmission</option>
+            </select>
+            <input type="text" id="manufacturerFilter" placeholder="Manufacturer">
+        </div>
+        <a href="checkout.html">checkout</a>
+        <div id="productList" class="product-list"></div>
+    </div>
+
+    <script src="browse.js"></script>
+</body>
+
+</html>
