@@ -1,1 +1,2 @@
 # Auto_Spare_Parts_Management_System
+Developed a web-based inventory management system for automotive spare parts, enabling retailers and customers to seamlessly browse, post, and purchase spare parts. Designed an intuitive UI using HTML, CSS, and JavaScript and integrated MongoDB for efficient data storage. Implemented user authentication, product search, and checkout functionality. The project enhances inventory tracking and streamlines the process for auto spare parts businesses.
